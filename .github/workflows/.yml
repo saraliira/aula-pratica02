@@ -1,0 +1,17 @@
+name: Meu Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Exibir mensagem
+        run: echo "Pipeline executado com sucesso!"
